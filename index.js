@@ -21,8 +21,9 @@ module.exports = function opwait(stream, onstatus) {
       if (tag === 'final') final = data
       try {
         const p = onstatus(status)
-        if (typeof p?.catch === 'function')
+        if (typeof p?.catch === 'function') {
           p.catch((err) => stream.destroy(err))
+        }
       } catch (err) {
         stream.destroy(err)
       }
