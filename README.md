@@ -2,6 +2,8 @@
 
 > Pear operation stream promise wrapper
 
+See [pear-opstream](https://github.com/holepunchto/pear-opstream).
+
 ## API
 
 ### `opwait(stream[, onstatus])`
