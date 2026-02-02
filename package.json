@@ -22,6 +22,7 @@
     "streamx": "^2.22.1"
   },
   "dependencies": {
-    "pear-errors": "^1.0.0"
+    "pear-errors": "^1.0.0",
+    "ptnm": "^1.0.0"
   }
 }
