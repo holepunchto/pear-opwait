@@ -4,16 +4,22 @@ const { test } = require('brittle')
 const opwait = require('..')
 
 test('match - opwait', async function (t) {
-  t.plan(2)
+  t.plan(3)
   const statuses = [
-    { tag: 'begin', data: { n: 3 } },
+    { tag: 'begin', data: { n: 4 } },
+    { tag: 'middle', data: { n: 3 } },
     { tag: 'middle', data: { n: 2 } },
     { tag: 'final', data: { n: 1 } }
   ]
 
+  const expected = [
+    { tag: 'middle', data: { n: 3 } },
+    { tag: 'middle', data: { n: 2 } }
+  ]
+
   const stream = Readable.from(statuses)
   const final = await opwait(stream, { tag: 'middle' }, (status) => {
-    t.alike(status, statuses[1])
+    t.alike(status, expected.shift())
   })
   t.alike(final, { n: 1 })
 })
