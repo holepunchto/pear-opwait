@@ -1,6 +1,6 @@
 {
   "name": "pear-opwait",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "type": "commonjs",
   "description": "Pear operation stream promise wrapper",
@@ -23,5 +23,18 @@
   },
   "dependencies": {
     "pear-errors": "^1.0.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/pear-opwait.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/holepunchto/pear-opwait/issues"
+  },
+  "homepage": "https://github.com/holepunchto/pear-opwait#readme"
 }
